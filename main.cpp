@@ -31,7 +31,7 @@ int main()
 
 	cout << "Virenschleuder V1.0 \nOliver Strauss (C) 2010\n";
     
-	file_read.open("Verzeichnisse.txt", ios::in);
+	file_read.open("directory.txt", ios::in);
 
 	if(file_read)
 	{
