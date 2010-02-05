@@ -29,10 +29,10 @@ int main()
 	string		directory;
 	string		temp_text;
 
-	cout << "Virenschleuder V1.0 \nOliver Strauss (C) 2010\n";
+	cout << "Virenschleuder V1.1 \nOliver Strauss (C) 2010\n";
     
 	file_read.open("directory.txt", ios::in);
-
+	cout << "Try to read the directory.txt";
 	if(file_read)
 	{
 		while(!file_read.eof())
@@ -41,20 +41,20 @@ int main()
 			file_write.open(temp_text.c_str(), ios::out);
 			if(file_write)
 			{
-				cout << "Writing a Virus to " << temp_text << "\n";
+				cout << "Writing a ''Virus'' to " << temp_text << "\n";
 				file_write << "X5O!P%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*" << endl;
 				file_write.close();
 			}
 			else
 			{
-				cout << "Unable to write a file: " << temp_text;
+				cout << "Unable to write a file to " << temp_text;
 			}
 		}
 		file_read.close();
 	}
 	else
 	{
-		cout << "Unable to load the file!";
+		cout << "Unable to load the directory.txt file!";
 	}
 	cout << "Done\n";
 	system("PAUSE");
