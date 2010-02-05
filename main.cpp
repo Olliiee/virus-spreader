@@ -43,11 +43,19 @@ int main()
 			{
 				cout << "Writing a Virus to " << temp_text << "\n";
 				file_write << "X5O!P%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*" << endl;
+				file_write.close();
 			}
-			file_write.close();
+			else
+			{
+				cout << "Unable to write a file: " << temp_text;
+			}
 		}
+		file_read.close();
 	}
-	file_read.close();
+	else
+	{
+		cout << "Unable to load the file!";
+	}
 	cout << "Done\n";
 	system("PAUSE");
 	return 0;
